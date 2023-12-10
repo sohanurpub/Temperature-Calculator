@@ -100,10 +100,10 @@ public class TemperatureCalculator {
 		convertButton.setFont(new Font("Tahoma", Font.BOLD, 18));
 		convertButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				convertTime();
+				convertTemperature();
 			}
 
-			private void convertTime() {
+			private void convertTemperature() {
 			    try {
 			        long inputTemperature = Long.parseLong(textField1.getText());
 			        String fromUnit = (String) comboBox1.getSelectedItem();
@@ -123,7 +123,7 @@ public class TemperatureCalculator {
 			                break;
 			            
 			            default:
-			            	Celsius = TimeUnit.valueOf(fromUnit).toMicros(inputTemperature);
+			            	Celsius = 0;
 			                break;
 			        }
 
